@@ -1,8 +1,22 @@
 from kivy.app import App
 from kivy.uix.button import Button
+from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
+from kivy.uix.textinput import TextInput
+from kivy.uix.widget import Widget
 
-class rangr(App):
+class loginScreen(BoxLayout):
+
+    def __init__(self, **kwargs):
+        super(loginScreen, self).__init__(**kwargs)
+        self.username = TextInput(multiline=False)
+        print(self.username)
+
+
+class homepage(Widget):
+    pass
+
+class rangrApp(App):
     #--declarations--#
     use_kivy_settings = False #determines if Kivy config panel appears
 
@@ -17,9 +31,10 @@ class rangr(App):
  
     def build(self):
         config = self.config
-        return Label(text='key1 is %s and key2 is %d' % (
-            config.get('section1', 'key1'),
-            config.getint('section1', 'key2')))
+        if True == True:
+            return loginScreen()
+        else:
+            return homepage()
 
     def build_settings(self, settings):
         jsondata = """[
@@ -42,6 +57,7 @@ class rangr(App):
         settings.add_json_panel('Test application',
             self.config, data=jsondata)
 
+
     def on_config_change(self, config, section, key, value):
         if config is self.config:
             token = (section, key)
@@ -49,5 +65,7 @@ class rangr(App):
                 print('Our key1 has been changed to', value)
             elif token == ('section1', 'key2'):
                 print('Our key2 has been changed to', value)
-                
-rangr().run()
+
+if __name__ == '__main__':                
+    rangrApp().run()
+

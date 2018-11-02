@@ -1,0 +1,28 @@
+#:kivy 1.0.9
+
+<loginScreen>:
+	f_username: username
+
+	BoxLayout:
+		orientation: 'vertical'
+		padding: 10
+		spacing: 10
+		Label:
+			text: 'rangr'
+			font_name: 'Roboto-Italic'
+			font_size: '50sp'
+		Label:
+			text: 'Choose a username'
+			font_size: '25sp'
+		TextInput:
+			id: username
+		Label:
+			text: '''Your username will be automatically linked to your phone number - it will be your profile's name and will serve as your display name to others if you choose to use the online portions of this application. This can be changed later.'''
+			size_hint_y: None
+			text_size: self.width, None
+			height: self.texture_size[1]
+		Button:
+			text: 'Submit'
+
+
+<homepage>:
