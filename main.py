@@ -6,12 +6,8 @@ from kivy.uix.textinput import TextInput
 from kivy.uix.widget import Widget
 
 class loginScreen(BoxLayout):
-
-    def __init__(self, **kwargs):
-        super(loginScreen, self).__init__(**kwargs)
-        self.username = TextInput(multiline=False)
-        print(self.username)
-
+    #<loginScreen>
+    pass
 
 class homepage(Widget):
     pass
@@ -56,7 +52,9 @@ class rangrApp(App):
         ]"""
         settings.add_json_panel('Test application',
             self.config, data=jsondata)
-
+        
+    def submitUsername(username):
+        print(username)
 
     def on_config_change(self, config, section, key, value):
         if config is self.config:

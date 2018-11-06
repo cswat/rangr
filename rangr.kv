@@ -1,28 +1,38 @@
 #:kivy 1.0.9
 
 <loginScreen>:
-	f_username: username
-
 	BoxLayout:
 		orientation: 'vertical'
 		padding: 10
 		spacing: 10
+		pos_hint: {'center_x': .5}
 		Label:
 			text: 'rangr'
 			font_name: 'Roboto-Italic'
 			font_size: '50sp'
 		Label:
-			text: 'Choose a username'
+			text: 'Choose a username:'
 			font_size: '25sp'
 		TextInput:
-			id: username
+			id: f_username
+			size_hint_y: .17
+			size_hint_x: .75
+			pos_hint: {'center_x': .5}
 		Label:
-			text: '''Your username will be automatically linked to your phone number - it will be your profile's name and will serve as your display name to others if you choose to use the online portions of this application. This can be changed later.'''
-			size_hint_y: None
-			text_size: self.width, None
+			halign: 'center'
 			height: self.texture_size[1]
+			pos_hint: {'center_x': .5}
+			size_hint_y: None
+			size_hint_x: .75
+			text: '''Your username will be automatically linked to your phone number - it will be your profile's name and will serve as your display name to others if you choose to use the online portions of this application. This can be changed later.'''
+			text_size: self.width, None
 		Button:
+			font_size: '25sp'
+			id: f_submit
+			on_press: app.submitUsername()
+			pos_hint: {'center_x': .5}
+			size_hint_y: .5
+			size_hint_x: .5
 			text: 'Submit'
-
 
 <homepage>:
