@@ -2,37 +2,49 @@
 
 <loginScreen>:
 	BoxLayout:
+		id: f_loginScreen
 		orientation: 'vertical'
 		padding: 10
 		spacing: 10
-		pos_hint: {'center_x': .5}
 		Label:
-			text: 'rangr'
 			font_name: 'Roboto-Italic'
 			font_size: '50sp'
+			text: 'rangr'
 		Label:
-			text: 'Choose a username:'
 			font_size: '25sp'
+			text: 'Choose a username:'
 		TextInput:
 			id: f_username
-			size_hint_y: .17
-			size_hint_x: .75
 			pos_hint: {'center_x': .5}
+			size_hint_x: .75			
+			size_hint_y: .17
 		Label:
 			halign: 'center'
 			height: self.texture_size[1]
 			pos_hint: {'center_x': .5}
+			size_hint_x: .75			
 			size_hint_y: None
-			size_hint_x: .75
 			text: '''Your username will be automatically linked to your phone number - it will be your profile's name and will serve as your display name to others if you choose to use the online portions of this application. This can be changed later.'''
 			text_size: self.width, None
 		Button:
 			font_size: '25sp'
 			id: f_submit
-			on_press: app.submitUsername()
+			on_release: 
+				app.submitUsername(f_username.text)
+				root.manager.current = 'home'
 			pos_hint: {'center_x': .5}
-			size_hint_y: .5
 			size_hint_x: .5
+			size_hint_y: .5
 			text: 'Submit'
 
-<homepage>:
+<homeScreen>:
+	BoxLayout:
+		id: f_homeScreen
+		orientation: 'vertical'
+		padding: 10
+		spacing: 10
+		Label:
+			text: 'Home screen'
+		Button:
+			on_release: root.manager.current = 'login'
+			text: 'Back to login'
