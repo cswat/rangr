@@ -17,6 +17,30 @@ class homeScreen(Screen):
     #rangr.kv - <homeScreen>
     pass
 
+class userProfileScreen(Screen):
+    #rangr.kv - <userProfileScreen>
+    pass
+
+class searchResultsScreen(Screen):
+    #rangr.kv - <searchResultsScreen>
+    pass
+
+class addNewParkScreen(Screen):
+    #rangr.kv - <addNewParkScreen>
+    pass
+
+class viewParkScreen(Screen):
+    #rangr.kv - <viewParkScreen>
+    pass
+
+class makeReportScreen(Screen):
+    #rangr.kv - <makeReportScreen>
+    pass
+
+class appInfoScreen(Screen):
+    #rangr.kv - <appInfoScreen>
+    pass
+
 class rangrApp(App):
     #--declarations--#
     use_kivy_settings = False #determines if Kivy config panel appears
@@ -28,6 +52,12 @@ class rangrApp(App):
         screenManager = ScreenManager(transition=NoTransition())
         screenManager.add_widget(loginScreen(name='login'))
         screenManager.add_widget(homeScreen(name='home'))
+        screenManager.add_widget(userProfileScreen(name='userProfile'))
+        screenManager.add_widget(searchResultsScreen(name='searchResults'))
+        screenManager.add_widget(addNewParkScreen(name='addNewPark'))
+        screenManager.add_widget(viewParkScreen(name='viewPark'))
+        screenManager.add_widget(makeReportScreen(name='makeReport'))
+        screenManager.add_widget(appInfoScreen(name='appInfo'))
         return screenManager
             
     def build_config(self, config):
@@ -74,7 +104,7 @@ if __name__ == '__main__':
 #--Remaining items--#
     #(Mostly in ideal chronological order
     #Set up screen manager to manage additional screens === DONE 2018/11/06
-    #Add additional screens at a basic level (no content, just KV and app classes)
+    #Add additional screens at a basic level (no content, just KV and app classes) === DONE 2018/11/07
     #Package attempt 1
     #Create a MySQL DB to manage data and one table to test connection
     #Build connection to DB to store app data (test with login screen)
