@@ -105,7 +105,7 @@ if __name__ == '__main__':
     #(Mostly in ideal chronological order
     #Set up screen manager to manage additional screens === DONE 2018/11/06
     #Add additional screens at a basic level (no content, just KV and app classes) === DONE 2018/11/07
-    #Package attempt 1
+    #Package attempt 1 === DONE 2018/11/14
     #Create a MySQL DB to manage data and one table to test connection
     #Build connection to DB to store app data (test with login screen)
     #Package attempt 2
