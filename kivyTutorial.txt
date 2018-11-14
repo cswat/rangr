@@ -1,1 +1,0 @@
-https://kivy.org/doc/stable/gettingstarted/first_app.html
