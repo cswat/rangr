@@ -1,0 +1,1 @@
+IPV3001 for recording their own issue on SO - https://stackoverflow.com/questions/48726523/buildozer-android-packaging-error-sh-errorreturncode-2-exception-str-faile
