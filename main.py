@@ -4,10 +4,13 @@
 from kivy.app import App
 from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label
 from kivy.uix.screenmanager import ScreenManager, Screen, NoTransition
 from kivy.uix.textinput import TextInput
 from kivy.uix.widget import Widget
+
+from kivy.garden.navigationdrawer import NavigationDrawer
 
 class loginScreen(Screen):
     #rangr.kv - <loginScreen>
@@ -49,6 +52,7 @@ class rangrApp(App):
     
     def build(self): #this determines what loads when the app builds
         config = self.config
+        
         screenManager = ScreenManager(transition=NoTransition())
         screenManager.add_widget(loginScreen(name='login'))
         screenManager.add_widget(homeScreen(name='home'))
@@ -94,7 +98,7 @@ class rangrApp(App):
                 print('Our key1 has been changed to', value)
             elif token == ('section1', 'key2'):
                 print('Our key2 has been changed to', value)
-
+        
     def submitUsername(self, username):
         print(username)
 
@@ -105,7 +109,7 @@ if __name__ == '__main__':
     #(Mostly in ideal chronological order
     #Set up screen manager to manage additional screens === DONE 2018/11/06
     #Add additional screens at a basic level (no content, just KV and app classes) === DONE 2018/11/07
-    #Package attempt 1 === DONE 2018/11/14
+    #Package attempt 1
     #Create a MySQL DB to manage data and one table to test connection
     #Build connection to DB to store app data (test with login screen)
     #Package attempt 2
