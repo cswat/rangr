@@ -38,6 +38,19 @@
 			text: 'Submit'
 
 <homeScreen>:
+	NavigationDrawer:
+		id: f_leftNav
+		touch_accept_width: 50
+		BoxLayout:
+			orientation: "vertical"
+		    Button:
+		    	on_release:
+		    		root.manager.current = 'login'
+		        text: "Button 1"
+		    Button:
+		        text: "Button 2"
+		    Button:
+		        text: "Button 3"
 	BoxLayout:
 		id: f_homeScreen
 		orientation: 'vertical'
@@ -46,8 +59,13 @@
 		Label:
 			text: 'Home screen'
 		Button:
-			on_release: root.manager.current = 'login'
+			on_release: 
+				root.manager.current = 'login'
 			text: 'Back to login'
+		Button:
+			on_release: 
+				f_leftNav.toggle_state()
+			text: 'hamburger'
 			
 <profileScreen>:
 
