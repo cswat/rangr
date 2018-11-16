@@ -1,3 +1,4 @@
-Ryan P. for helping with a simple build() issue - https://stackoverflow.com/questions/24334362/kivy-invalid-instance-in-app-root
-IPV3001 for recording their own issue on SO - https://stackoverflow.com/questions/48726523/buildozer-android-packaging-error-sh-errorreturncode-2-exception-str-faile
-Wilson Reuben for fixing their own issue on SO - https://stackoverflow.com/questions/42724611/navigation-drawer-not-showing-on-screen
+Ryan P. for helping with a build method issue - https://stackoverflow.com/questions/24334362/kivy-invalid-instance-in-app-root
+IPV3001 for recording their fix on SO - https://stackoverflow.com/questions/48726523/buildozer-android-packaging-error-sh-errorreturncode-2-exception-str-faile
+Wilson Reuben for recording their fix on SO - https://stackoverflow.com/questions/42724611/navigation-drawer-not-showing-on-screen
+kiok46 for recording their fix on SO - https://stackoverflow.com/questions/30202801/how-to-access-id-widget-of-different-class-from-a-kivy-file-kv
