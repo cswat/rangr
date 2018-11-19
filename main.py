@@ -10,7 +10,7 @@ from kivy.uix.screenmanager import ScreenManager, Screen, NoTransition
 from kivy.uix.textinput import TextInput
 from kivy.uix.widget import Widget
 
-from kivy.garden.navigationdrawer import NavigationDrawer
+#from kivy.garden.navigationdrawer import NavigationDrawer ##Uncomment later
 
 class loginScreen(Screen):
     #rangr.kv - <loginScreen>
@@ -74,14 +74,12 @@ class rangrApp(App):
         jsondata = """[
             { "type": "title",
               "title": "Test application" },
-
             { "type": "options",
               "title": "My first key",
               "desc": "Description of my first key",
               "section": "section1",
               "key": "key1",
               "options": ["value1", "value2", "another value"] },
-
             { "type": "numeric",
               "title": "My second key",
               "desc": "Description of my second key",
@@ -106,11 +104,14 @@ if __name__ == '__main__':
     rangrApp().run()
 
 #--Remaining items--#
-    #(Mostly in ideal chronological order
+    #(Mostly in ideal chronological order)
     #Set up screen manager to manage additional screens === DONE 2018/11/06
     #Add additional screens at a basic level (no content, just KV and app classes) === DONE 2018/11/07
-    #Package attempt 1
+    #Package attempt 1 == DONE 2018/11/14
+    #Build hamburger menu
+    #Flesh out additional screens with content
     #Create a MySQL DB to manage data and one table to test connection
+    #Figure out what MySQL connector to use (PyMySQL vs mysqlclient) === DONE 2018/11/18
     #Build connection to DB to store app data (test with login screen)
     #Package attempt 2
     #Design schema for DB connection (this can kind of be ad hoc but ideally the mock ups have the info needed)
