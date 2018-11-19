@@ -38,34 +38,49 @@
 			text: 'Submit'
 
 <homeScreen>:
-	NavigationDrawer:
-		id: f_leftNav
-		touch_accept_width: 50
-		BoxLayout:
-			orientation: "vertical"
-		    Button:
-		    	on_release:
-		    		root.manager.current = 'login'
-		        text: "Button 1"
-		    Button:
-		        text: "Button 2"
-		    Button:
-		        text: "Button 3"
+	#NavigationDrawer:
+		#id: f_leftNav
+		#touch_accept_width: 50
+		#BoxLayout:
+			#orientation: "vertical"
+		    #Button:
+		    	#on_release:
+		    		#root.manager.current = 'home'
+		        #text: "Home"
+		    #Button:
+				#on_release:
+		    		#root.manager.current = 'userProfile'
+		        #text: "My profile"
+		    #Button:
+				#on_release:
+		    		#root.manager.current = 'makeReport'
+		        #text: "Make a report"
+			#Button:
+				#on_release:
+		    		#root.manager.current = 'appInfo'
+		        #text: "App info"
 	BoxLayout:
-		id: f_homeScreen
-		orientation: 'vertical'
-		padding: 10
-		spacing: 10
-		Label:
-			text: 'Home screen'
+		id: f_news_parks_announcements
+		orientation: "vertical"
+		GridLayout:
+			id: f_homeScreen_top_row
+			cols: 2
+			rows: 1
+			size_hint_y: .3
+			Button:
+				on_release: f_leftNav.toggleState()
+				size_hint_x: .1
+				text: "Hamburger"
+			TextInput:
+				size_hint_x: .9
+				text: "search parks" 
 		Button:
-			on_release: 
-				root.manager.current = 'login'
-			text: 'Back to login'
+			text: "News"
 		Button:
-			on_release: 
-				f_leftNav.toggle_state()
-			text: 'hamburger'
+			text: "My parks"
+		Button:
+			text: "Announcements"
+		
 			
 <profileScreen>:
 
