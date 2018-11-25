@@ -38,48 +38,49 @@
 			text: 'Submit'
 
 <homeScreen>:
-	#NavigationDrawer:
-		#id: f_leftNav
-		#touch_accept_width: 50
-		#BoxLayout:
-			#orientation: "vertical"
-		    #Button:
-		    	#on_release:
-		    		#root.manager.current = 'home'
-		        #text: "Home"
-		    #Button:
-				#on_release:
-		    		#root.manager.current = 'userProfile'
-		        #text: "My profile"
-		    #Button:
-				#on_release:
-		    		#root.manager.current = 'makeReport'
-		        #text: "Make a report"
-			#Button:
-				#on_release:
-		    		#root.manager.current = 'appInfo'
-		        #text: "App info"
-	BoxLayout:
-		id: f_news_parks_announcements
-		orientation: "vertical"
-		GridLayout:
-			id: f_homeScreen_top_row
-			cols: 2
-			rows: 1
-			size_hint_y: .3
+	NavigationDrawer:
+		anim_type: 'slide_above_anim'
+		id: f_leftNav
+		touch_accept_width: 50
+		BoxLayout:
+			orientation: "vertical"
+		    Button:
+		    	on_release:
+		    		root.manager.current = 'home'
+		        text: "Home"
+		    Button:
+				on_release:
+		    		root.manager.current = 'userProfile'
+		        text: "My profile"
+		    Button:
+				on_release:
+		    		root.manager.current = 'makeReport'
+		        text: "Make a report"
 			Button:
-				on_release: f_leftNav.toggleState()
-				size_hint_x: .1
-				text: "Hamburger"
-			TextInput:
-				size_hint_x: .9
-				text: "search parks" 
-		Button:
-			text: "News"
-		Button:
-			text: "My parks"
-		Button:
-			text: "Announcements"
+				on_release:
+		    		root.manager.current = 'appInfo'
+		        text: "App info"
+		BoxLayout:
+			id: f_news_parks_announcements
+			orientation: "vertical"
+			GridLayout:
+				id: f_homeScreen_top_row
+				cols: 2
+				rows: 1
+				size_hint_y: .3
+				Button:
+					on_release: f_leftNav.toggle_state()
+					size_hint_x: .1
+					text: "Hamburger"
+				TextInput:
+					size_hint_x: .9
+					text: "search parks" 
+			Button:
+				text: "News"
+			Button:
+				text: "My parks"
+			Button:
+				text: "Announcements"
 		
 			
 <profileScreen>:
