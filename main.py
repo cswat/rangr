@@ -10,7 +10,7 @@ from kivy.uix.screenmanager import ScreenManager, Screen, NoTransition
 from kivy.uix.textinput import TextInput
 from kivy.uix.widget import Widget
 
-#from kivy.garden.navigationdrawer import NavigationDrawer ##Uncomment later
+from kivy.garden.navigationdrawer import NavigationDrawer ##Uncomment later
 
 class loginScreen(Screen):
     #rangr.kv - <loginScreen>
@@ -108,7 +108,7 @@ if __name__ == '__main__':
     #Set up screen manager to manage additional screens === DONE 2018/11/06
     #Add additional screens at a basic level (no content, just KV and app classes) === DONE 2018/11/07
     #Package attempt 1 == DONE 2018/11/14
-    #Build hamburger menu
+    #Build hamburger menu == DONE 2018/11/25
     #Flesh out additional screens with content
     #Create a MySQL DB to manage data and one table to test connection
     #Figure out what MySQL connector to use (PyMySQL vs mysqlclient) === DONE 2018/11/18
