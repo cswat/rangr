@@ -81,10 +81,18 @@
 				text: "My parks"
 			Button:
 				text: "Announcements"
-		
 			
 <profileScreen>:
-
+	GridLayout:
+		id: f_profileScreen
+		cols: 2
+		rows: 3
+		Label:
+			text: "Username:"
+		Label:
+			text: "Reports made:"
+		Button:
+			text: "Delete account"
 
 <searchResultsScreen>:
 
@@ -93,9 +101,72 @@
 
 
 <addNewParkScreen>:
-
-
+	GridLayout:
+		id: f_addNewParkScreen
+		cols: 2
+		rows: 7
+		Label:
+			font_size: '25sp'
+			text: "Add a park"
+		Label:
+			halign: 'center'
+			height: self.texture_size[1]
+			pos_hint: {'center_x': .5}
+			size_hint_x: .75			
+			size_hint_y: None
+			text: '''Is your local park missing from the list? Submit it here and, after review, it'll be added to the list.'''
+			text_size: self.width, None
+		Label:
+			text: "Park type:"
+		Label:
+			id: f_newParkOther
+			font_name: 'Roboto-Italic'
+			text: "Other:"
+		Label:
+			id: f_newParkName
+			text: "Park name:"
+			
 <makeReportScreen>:
-
-
+	GridLayout:
+		id: f_makeReportScreen
+		cols: 2
+		rows: 7
+		Label:
+			font_size: '25sp'
+			text: "Make a report"
+		Label:
+			halign: 'center'
+			height: self.texture_size[1]
+			pos_hint: {'center_x': .5}
+			size_hint_x: .75			
+			size_hint_y: None
+			text: '''See something weird on the trail? Fallen trees, litterbugs, or shifty characters can be reported to the appropriate authorities here. You can also report issues with the app.'''
+			text_size: self.width, None
+		Label:
+			text: "Issue type:"
+		Label:
+			text: "Park name:"
+		Label:
+			font_name: 'Roboto-Italic'
+			text: "Trail name:"
+		BoxLayout:
+			orientation: vertical
+			Label:
+				text: "Describe the issue:"
+			TextInput:
+				id: f_issueDescription
+				size_hint_x: .75
+				size_hint_y: .75
+			
 <appInfoScreen>:
+	BoxLayout:
+		id: f_appInfoScreen
+		orientation: vertical
+		Label:
+			halign: 'center'
+			height: self.texture_size[1]
+			pos_hint: {'center_x': .5}
+			size_hint_x: .75			
+			size_hint_y: None
+			text: '''The goal of this app is to centralize information on parks, regardless of size. Made using the kivy library in python.'''
+			text_size: self.width, None
